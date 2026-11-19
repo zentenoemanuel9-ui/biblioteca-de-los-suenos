@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de los Sueños</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>📚 Biblioteca de los Sueños</h1>
+        <p>Seis historias para descubrir, un sueño para compartir.</p>
+        <span>EXPOSICIÓN TÉCNICA 2026</span>
+    </header>
+
+    <main>
+
+        <section class="presentacion">
+            <h2>Bienvenidos a nuestra biblioteca</h2>
+            <p>
+                Te invitamos a descubrir seis historias diferentes.
+                Elegí un libro, conocé su mundo y votá por tu favorito.
+            </p>
+        </section>
+
+        <section class="biblioteca">
+            <h2>Nuestra colección</h2>
+
+            <div class="libros">
+
+                <article class="libro">
+                    <img src="imagenes/momo.jpg"
+                         alt="Portada de Momo">
+                    <h3>Momo</h3>
+                    <p>Michael Ende</p>
+                    <button onclick="abrirLibro(0)">Ver libro</button>
+                </article>
+
+                <article class="libro">
+                    <img src="imagenes/ruinas.jpg"
+                         alt="Portada de Las ruinas circulares">
+                    <h3>Las ruinas circulares</h3>
+                    <p>Jorge Luis Borges</p>
+                    <button onclick="abrirLibro(1)">Ver libro</button>
+                </article>
+
+                <article class="libro">
+                    <img src="imagenes/cuentos.jpg"
+                         alt="Portada de Cuentos de amor, de locura y de muerte">
+                    <h3>Cuentos de amor, de locura y de muerte</h3>
+                    <p>Horacio Quiroga</p>
+                    <button onclick="abrirLibro(2)">Ver libro</button>
+                </article>
+
+                <article class="libro">
+                    <img src="imagenes/perro.jpg"
+                         alt="Portada de Los ojos del perro siberiano">
+                    <h3>Los ojos del perro siberiano</h3>
+                    <p>Antonio Santa Ana</p>
+                    <button onclick="abrirLibro(3)">Ver libro</button>
+                </article>
+
+                <article class="libro">
+                    <img src="imagenes/metamorfosis.jpg"
+                         alt="Portada de La metamorfosis">
+                    <h3>La metamorfosis</h3>
+                    <p>Franz Kafka</p>
+                    <button onclick="abrirLibro(4)">Ver libro</button>
+                </article>
+
+                <article class="libro">
+                    <img src="imagenes/caperucita.jpg"
+                         alt="Portada de Caperucita Roja">
+                    <h3>Caperucita Roja</h3>
+                    <p>Cuento tradicional</p>
+                    <button onclick="abrirLibro(5)">Ver libro</button>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="votacion">
+            <h2>🏆 Elegí tu libro favorito</h2>
+            <p>¿Cuál de estas historias te gustó más?</p>
+
+            <div id="opciones-voto"></div>
+
+            <button id="boton-votar" onclick="votar()">
+                Confirmar mi voto
+            </button>
+
+            <p id="mensaje-voto"></p>
+        </section>
+
+        <section class="libro-suenos">
+            <h2>📖 El libro de los sueños</h2>
+            <p>
+                Todos tenemos un sueño que queremos cumplir.
+                Este espacio es para compartirlo con los demás.
+            </p>
+
+            <form id="formulario-suenos">
+                <label for="nombre">Tu nombre o firma:</label>
+                <input type="text" id="nombre"
+                       placeholder="Escribí tu nombre" maxlength="50" required>
+
+                <label for="sueno">¿Cuál es tu sueño?</label>
+                <textarea id="sueno"
+                          placeholder="Mi sueño es..."
+                          maxlength="500" required></textarea>
+
+                <button type="submit">Compartir mi sueño</button>
+            </form>
+
+            <h3>Sueños compartidos</h3>
+            <div id="lista-suenos">
+                <p>Todavía no hay sueños compartidos.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="ventana-libro" class="modal">
+        <div class="contenido-modal">
+            <button class="cerrar" onclick="cerrarLibro()">✕</button>
+            <h2 id="titulo-modal"></h2>
+            <p id="autor-modal"></p>
+            <p id="descripcion-modal"></p>
+            <div id="lectura-modal"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Biblioteca de los Sueños · Exposición Técnica 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

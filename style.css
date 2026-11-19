@@ -1,0 +1,384 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #24104f, #452080, #153e75);
+    color: #ffffff;
+    font-family: Georgia, serif;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(120deg, #ff4d8d, #9b4dff, #348bff);
+    box-shadow: 0 8px 30px #0005;
+    border-bottom: 4px solid #ffd166;
+}
+
+.encabezado h1 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 3px 8px #38105d;
+}
+
+.encabezado p {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.encabezado span {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #fff3b0;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+section h2 {
+    color: #ffe08a;
+    margin-bottom: 18px;
+    font-size: 27px;
+}
+
+/* PRESENTACIÓN */
+
+.presentacion {
+    text-align: center;
+    padding: 35px 20px;
+    line-height: 1.8;
+    background: linear-gradient(120deg, #ffbd59, #ff7b72);
+    color: #39204c;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #0004;
+}
+
+.presentacion h2 {
+    color: #57245c;
+}
+
+/* BIBLIOTECA */
+
+.biblioteca {
+    text-align: center;
+    background: linear-gradient(135deg, #39206c, #174d79);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px #0004;
+}
+
+.libros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.libro {
+    background: linear-gradient(145deg, #ff77a8, #9c69ff);
+    color: white;
+    padding: 18px;
+    border: 3px solid #ffffff70;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px #0005;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.libro:nth-child(2) {
+    background: linear-gradient(145deg, #42c9e8, #3975ed);
+}
+
+.libro:nth-child(3) {
+    background: linear-gradient(145deg, #ff9a55, #ed4d77);
+}
+
+.libro:nth-child(4) {
+    background: linear-gradient(145deg, #45d6a0, #168bba);
+}
+
+.libro:nth-child(5) {
+    background: linear-gradient(145deg, #b77aff, #7048d9);
+}
+
+.libro:nth-child(6) {
+    background: linear-gradient(145deg, #ffe16b, #ff914d);
+    color: #49234c;
+}
+
+.libro:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px #0007;
+}
+
+.libro img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.libro h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.libro:nth-child(6) h3 {
+    color: #49234c;
+}
+
+.libro p {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.libro:nth-child(6) p {
+    color: #49234c;
+}
+
+/* BOTONES */
+
+button {
+    background: linear-gradient(100deg, #ff3985, #ff9c42);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #0004;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(100deg, #ff70b5, #ffd15c);
+    transform: scale(1.05);
+}
+
+/* VOTACIÓN */
+
+.votacion {
+    background: linear-gradient(135deg, #ffcf56, #ff796c);
+    color: #45204e;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px #0004;
+}
+
+.votacion h2 {
+    color: #57245c;
+}
+
+.votacion > p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.opcion-voto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff55;
+    color: #39204c;
+    padding: 13px;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.opcion-voto:hover {
+    background: #ffffff99;
+}
+
+.opcion-voto input {
+    accent-color: #a12bba;
+    width: 18px;
+    height: 18px;
+}
+
+#boton-votar {
+    margin-top: 15px;
+    background: linear-gradient(100deg, #863bce, #ed4789);
+}
+
+#mensaje-voto {
+    margin-top: 15px;
+    color: #57245c;
+}
+
+/* LIBRO DE LOS SUEÑOS */
+
+.libro-suenos {
+    background: linear-gradient(135deg, #36c9bd, #5477ef, #a45de0);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px #0004;
+}
+
+.libro-suenos h2 {
+    color: white;
+}
+
+.libro-suenos > p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+form label {
+    color: white;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    background: #ffffff;
+    border: 2px solid #d5c5ff;
+    border-radius: 10px;
+    padding: 13px;
+    color: #39204c;
+    font-family: inherit;
+    font-size: 15px;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #ffe08a;
+    border-color: #ffffff;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#lista-suenos {
+    margin-top: 20px;
+}
+
+.sueno-card {
+    background: #ffffff30;
+    border-left: 4px solid #ffe08a;
+    border-radius: 10px;
+    padding: 17px;
+    margin-top: 12px;
+}
+
+.sueno-card h4 {
+    color: #fff1a8;
+    margin-bottom: 8px;
+}
+
+/* VENTANA DE LOS LIBROS */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    background: rgba(20, 8, 45, 0.88);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.contenido-modal {
+    background: linear-gradient(135deg, #542d91, #263e82);
+    color: white;
+    border: 2px solid #e5b5ff;
+    border-radius: 20px;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 35px;
+    line-height: 1.8;
+    box-shadow: 0 10px 40px #0008;
+}
+
+.contenido-modal h2 {
+    color: #ffe08a;
+    margin: 20px 0 10px;
+}
+
+.contenido-modal p {
+    margin-bottom: 15px;
+}
+
+.cerrar {
+    float: right;
+    padding: 8px 13px;
+    background: #ff4d8d;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    background: linear-gradient(90deg, #ff4d8d, #814bdf, #348bff);
+    padding: 25px;
+    color: white;
+    border-top: 3px solid #ffd166;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 750px) {
+    .libros {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .libro {
+        padding: 12px;
+    }
+
+    .libro img {
+        height: 190px;
+    }
+
+    .encabezado h1 {
+        font-size: 29px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .contenido-modal {
+        padding: 22px;
+        margin: 25px auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .libros {
+        grid-template-columns: 1fr;
+    }
+}
